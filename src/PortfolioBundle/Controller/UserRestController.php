@@ -21,14 +21,37 @@ class UserRestController extends Controller
         }
         return $user;
     }
+    /**
+     * @param $username
+     * @View()
+     * @return mixed
+     */
+    public function postUserAction($username){
+        $user = $this->getDoctrine()->getRepository('PortfolioBundle:User')->findOneByUsername($username);
+        if(!is_object($user)){
+            throw $this->createNotFoundException();
+        }
+        return $user;
+    }
 
     /**
      * @param User $user
      * @View()
-     * @ParamsConverter("user",class="PortfolioBundle:User")
      * @return array
      */
     public function getUsersAction(){
+        $users = $this->getDoctrine()->getRepository('PortfolioBundle:User')
+            ->findAll();
+
+        return ['users' => $users];
+    }
+
+    /**
+     * @param User $user
+     * @View()
+     * @return array
+     */
+    public function postUsersAction(){
         $users = $this->getDoctrine()->getRepository('PortfolioBundle:User')
             ->findAll();
 

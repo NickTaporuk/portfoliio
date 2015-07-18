@@ -25,7 +25,8 @@
         "jackalope/jackalope-doctrine-dbal": "~1.1,>=1.1.2",
         "friendsofsymfony/rest-bundle": "dev-master",
         "jms/serializer-bundle": "dev-master",
-        "doctrine/doctrine-fixtures-bundle": "dev-master"
+        "doctrine/doctrine-fixtures-bundle": "dev-master",
+        "sonata-project/admin-bundle": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
