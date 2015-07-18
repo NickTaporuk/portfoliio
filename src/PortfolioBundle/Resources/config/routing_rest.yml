@@ -1,0 +1,4 @@
+users_portfolio :
+  type: rest
+  resource:     "PortfolioBundle:UserRest"
+#  name_prefix:  api_

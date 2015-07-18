@@ -1,3 +1,18 @@
+#REST
+rest :
+  type : rest
+  resource : "rest_routing.yml"
+  prefix : /api
+
+portfolio:
+    resource: "@PortfolioBundle/Resources/config/routing_rest.yml"
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+
+#users:
+#    type : rest
+#    resource : "@Portfolio/Controller/UsersController"
